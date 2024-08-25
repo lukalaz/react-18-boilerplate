@@ -9,9 +9,6 @@ const apiRequest = axios.create({
 apiRequest.interceptors.request.use((config) => {
   config.params = {
     apiKey: import.meta.env.VITE_NEWS_API_KEY,
-    q: "astonishing",
-    pageSize: 10,
-    page: 1,
     ...config.params,
   };
   return config;

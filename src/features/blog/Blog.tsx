@@ -38,24 +38,6 @@ const Blog = () => {
                 image={article.urlToImage}
               />
             ))}
-            <BlogCard
-              date="Dec 22, 2023"
-              title="Meet AutoManage, the best AI management tools"
-              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              image="https://i.ibb.co/Cnwd4q6/image-01.jpg"
-            />
-            <BlogCard
-              date="Dec 22, 2023"
-              title="Meet AutoManage, the best AI management tools"
-              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              image="https://i.ibb.co/Y23YC07/image-02.jpg"
-            />
-            <BlogCard
-              date="Dec 22, 2023"
-              title="Meet AutoManage, the best AI management tools"
-              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              image="https://i.ibb.co/7jdcnwn/image-03.jpg"
-            />
           </div>
         </div>
       </section>
