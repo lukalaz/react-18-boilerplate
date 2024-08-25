@@ -31,6 +31,8 @@ const Blog = () => {
                   >
                     newsapi.org
                   </a>
+                  .<br />
+                  This page is mostly used to demonstrate react-query usage.
                 </p>
               </div>
             </div>
