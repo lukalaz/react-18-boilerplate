@@ -39,7 +39,7 @@ const Blog = () => {
           </div>
 
           <div className="-mx-4 flex flex-wrap">
-            {result.articles.map((article) => (
+            {result?.articles.map((article) => (
               <BlogCard
                 date={formatTime(article.publishedAt)}
                 title={article.title}
