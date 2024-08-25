@@ -1,5 +1,6 @@
 import { BlogCard } from "./BlogCard";
 import { useGetPosts } from "./providers/blogApi";
+import { formatTime } from "./utils/blogHelpers";
 
 const Blog = () => {
   const { result, isPending, error } = useGetPosts();
@@ -38,7 +39,7 @@ const Blog = () => {
           <div className="-mx-4 flex flex-wrap">
             {result.articles.map((article) => (
               <BlogCard
-                date={article.publishedAt}
+                date={formatTime(article.publishedAt)}
                 title={article.title}
                 description={article.description}
                 image={article.urlToImage}
