@@ -1,6 +1,13 @@
 import { BlogCard } from "./BlogCard";
+import { useGetPosts } from "./providers/blogApi";
 
 const Blog = () => {
+  const { result, isPending, error } = useGetPosts();
+
+  if (isPending) return <>Loading...</>;
+
+  if (error) return <>Error...</>;
+
   return (
     <>
       <section className="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
@@ -23,6 +30,14 @@ const Blog = () => {
           </div>
 
           <div className="-mx-4 flex flex-wrap">
+            {result.articles.map((article) => (
+              <BlogCard
+                date={article.publishedAt}
+                title={article.title}
+                description={article.description}
+                image={article.urlToImage}
+              />
+            ))}
             <BlogCard
               date="Dec 22, 2023"
               title="Meet AutoManage, the best AI management tools"
